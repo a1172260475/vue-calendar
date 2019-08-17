@@ -166,7 +166,7 @@ var myVue=new Vue({
       } else {
         var now=new Date();
         var d = new Date(this.formatDate(now.getFullYear() , now.getMonth() , 1));
-        d.setDate(35);
+        d.setDate(42);
         date = new Date(this.formatDate(d.getFullYear(),d.getMonth() + 1,1));
       }
       this.currentDay = date.getDate();
@@ -189,7 +189,7 @@ var myVue=new Vue({
         this.days.push(dayobject);    //将日期放入data 中的days数组 供页面渲染使用
       }
       //其他周
-      for (var i = 1; i <= 35 - this.currentWeek; i++) {
+      for (var i = 1; i <= 42 - this.currentWeek; i++) {
         var d = new Date(str);
         d.setDate(d.getDate() + i);
         var dayobject={};
@@ -208,7 +208,7 @@ var myVue=new Vue({
     },
     pickNext: function(year, month) {
       var d = new Date(this.formatDate(year , month , 1));
-      d.setDate(35);
+      d.setDate(42);
       this.initData(this.formatDate(d.getFullYear(),d.getMonth() + 1,1));
     },
     pickYear: function(year, month) {
